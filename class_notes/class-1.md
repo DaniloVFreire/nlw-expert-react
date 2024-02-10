@@ -1,23 +1,17 @@
 # Anotações da aula 1
 
-- react-dom fica junto com a dependencia do react pq é o port/bridge para o document object manager do javascript web, no caso do mobile é o react-native
+- `react-dom` fica junto com a dependencia do react pq é o port/bridge para o document object manager do javascript web, no caso do mobile é o `react-native`
 - A primeira letra de um componente deve ser maiuscula sempre
-- tailwind: estilos usando apenas classes, bom pra forçar padronização nos estilos pois ele já limita algumas escolhas
+- Tailwind: estilos usando apenas classes, bom para forçar padronização nos estilos, pois ele já limita algumas escolhas.
   - seguir o tutorial vite: [Install Tailwind CSS with Vite](https://tailwindcss.com/docs/guides/vite)
   - Instalar extensões do vscode:
     - Tailwind CSS intelliSense
     - opcional: PostCSS Language support
-  - Pode-se estender opções de estilo do tailwind aidiconando elas ao tailwind.config.js como por exemplo:
-    ```json
-    fontFamily: {
-    sans: ['Inter', 'sans-serif']
-    }
-    ```
 
 ### Dicas tailwind:
 
 - a métrica dele é sempre x4 o valor em px
-- Pode-se estender opções de estilo do tailwind aidiconando elas ao tailwind.config.js como por exemplo:
+- Pode-se estender opções de estilo do tailwind adicionando elas ao tailwind.config.js como por exemplo:
   ```json
   fontFamily: {
   sans: ['Inter', 'sans-serif']

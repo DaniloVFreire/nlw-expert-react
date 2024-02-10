@@ -11,6 +11,6 @@ Projeto feito no nlw 14 (nlw expert), utilizando react com typescript e vite, cr
 
 ## Minhas anotações da Aula 1:
 
-[text](class_notes/class-1.md)
+[anotações da aula 1](class_notes/class-1.md)
 resultado aula 1:
-![alt text](class_notes/class-1-result.png)
+![resultado aula 1](class_notes/class-1-result.png)
