@@ -18,13 +18,26 @@ Projeto feito no nlw 14 (nlw expert), utilizando react com typescript e vite, cr
 - lucide-react(pacote de icones): `npm i lucide-react`
 - sonner (pacote de notificações): `npm i sonner`
 
-## Minhas anotações da Aula 1:
+## Anotações e resultados das aulas:
 
-[anotações da aula 1](class_notes/class_1/class-1.md)
+### Aula 1:
+
+[anotações da aula 1](class_notes/class_1/class-1.md)  
 resultado aula 1:
 ![resultado aula 1](class_notes/class_1/class-1-result.png)
 
-[anotações da aula 2](class_notes/class_2/class-2.md)
+### Aula 2:
+
+[anotações da aula 2](class_notes/class_2/class-2.md)  
 resultados aula 2:
 ![Lendo nota](class_notes/class_2/read-note.png)
 ![Escrevendo nota](class_notes/class_2/writte-note.png)
+
+### Aula 3:
+
+[anotações da aula 3](class_notes/class_3/class-3.md)  
+Resultados:
+![alt text](class_notes/class_3/full-hd-class-3-result.png)
+![alt text](class_notes/class_3/fraction-of-full-hd-class3-result.png)
+![alt text](class_notes/class_3/half-full-hd-class-3-result.png)
+![alt text](class_notes/class_3/mobile-class3-result.png)
