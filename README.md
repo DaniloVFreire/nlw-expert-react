@@ -35,3 +35,7 @@ npm run dev
 - :heavy_check_mark: Busca com case sensitive
 
 - :heavy_check_mark: Deleção rápida de anotações
+
+## Resultado final:
+
+![Gif resultado final](class_notes/nlw-expert-react-js.gif)
