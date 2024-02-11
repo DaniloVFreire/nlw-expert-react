@@ -1,6 +1,6 @@
 # nlw-expert-notes
 
-Projeto feito no nlw 14 (nlw expert), utilizando react com typescript e vite, criando um site de anotações com text to speech usando api local
+Projeto feito no nlw 14 (nlw expert), utilizando react com typescript e vite, criando um site de anotações com text to speech usando api local do navegador
 
 ## Requisitos:
 
@@ -20,24 +20,10 @@ Projeto feito no nlw 14 (nlw expert), utilizando react com typescript e vite, cr
 
 ## Anotações e resultados das aulas:
 
-### Aula 1:
+[index dos resumos](class_notes/general-class-index)
 
-[anotações da aula 1](class_notes/class_1/class-1.md)  
-resultado aula 1:
-![resultado aula 1](class_notes/class_1/class-1-result.png)
+## Features adicionais
 
-### Aula 2:
+- :heavy_check_mark: Busca com case sensitive
 
-[anotações da aula 2](class_notes/class_2/class-2.md)  
-resultados aula 2:
-![Lendo nota](class_notes/class_2/read-note.png)
-![Escrevendo nota](class_notes/class_2/writte-note.png)
-
-### Aula 3:
-
-[anotações da aula 3](class_notes/class_3/class-3.md)  
-Resultados:
-![alt text](class_notes/class_3/full-hd-class-3-result.png)
-![alt text](class_notes/class_3/fraction-of-full-hd-class3-result.png)
-![alt text](class_notes/class_3/half-full-hd-class-3-result.png)
-![alt text](class_notes/class_3/mobile-class3-result.png)
+- :heavy_check_mark: Deleção rápida de anotações
