@@ -12,6 +12,7 @@ Projeto feito no nlw 14 (nlw expert), utilizando react com typescript e vite, cr
 - Recomendações de extensões vscode:
   - Tailwind CSS intelliSense
   - opcional: PostCSS Language support
+  - opicional: console ninja (para ver os console.logs no código)
 - Radix dialog(implementações de funcionalidades como dialog e facilitações pré implementadas de acessibilidade): [Dialog documentation and installation](https://www.radix-ui.com/docs/primitives/components/dialog)
 - date-fns(para manipulação de datas): `npm i date-fns`
 - lucide-react(pacote de icones): `npm i lucide-react`
