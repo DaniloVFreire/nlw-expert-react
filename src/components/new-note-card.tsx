@@ -7,6 +7,8 @@ interface NewNoteCardProps {
   onNoteCreated: (content: string) => void;
 }
 
+let SpeechRecognition: SpeechRecognition | null = null;
+
 export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
   const [shouldShowOnBoarding, setShouldShowOnBoarding] = useState(true);
   const [content, setContent] = useState('');
@@ -51,20 +53,27 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
     setShouldShowOnBoarding(false);
     const SpeechRecognitionApi =
       window.SpeechRecognition || window.webkitSpeechRecognition;
-    const SpeechRecognition = new SpeechRecognitionApi();
+    SpeechRecognition = new SpeechRecognitionApi();
     SpeechRecognition.lang = 'pt-BR';
     SpeechRecognition.continuous = true; //Não para o reconhecimento se tiver pausas na fala
     SpeechRecognition.maxAlternatives = 1; // Limita opções de palavras com duvida, pegando o primeiro reconhecido
     SpeechRecognition.interimResults = true; // retorna em tempo de reconhecimento
     SpeechRecognition.onresult = event => {
-      event.results;
+      const transcript = Array.from(event.results).reduce((text, result) => {
+        return text.concat(result[0].transcript);
+      }, '');
+      setContent(transcript);
     };
     SpeechRecognition.onerror = event => {
       console.log(event);
     };
+    SpeechRecognition.start();
   }
   function handleStopRecording() {
     setIsRecording(false);
+    if (SpeechRecognition !== null) {
+      SpeechRecognition!.stop();
+    }
   }
   return (
     <Dialog.Root>
@@ -84,9 +93,9 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
       <Dialog.Portal>
         <Dialog.Overlay className="inset-0 fixed bg-black/60" />
         <Dialog.Content
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-         max-w-[640px] w-full h-[60vh]
-          bg-slate-700 rounded-md outline-none overflow-hidden
+          className="fixed inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2
+          md:max-w-[640px] w-full md:h-[60vh]
+          bg-slate-700 md:rounded-md outline-none overflow-hidden
            flex flex-col "
         >
           <Dialog.Close

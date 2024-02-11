@@ -2,6 +2,7 @@ import logo from './assets/logo-nlw-expert.svg';
 import { NoteCard } from './components/note-card';
 import { NewNoteCard } from './components/new-note-card';
 import { ChangeEvent, useState } from 'react';
+import { toast } from 'sonner';
 
 interface Note {
   id: string;
@@ -28,10 +29,11 @@ export function App() {
     setNotes(notesArray);
     localStorage.setItem('notes', JSON.stringify(notesArray));
   }
-  function onNoteDeletion(noteId: string) {
+  function onNoteDeleted(noteId: string) {
     const newNotes = notes.filter(note => note.id !== noteId);
     setNotes(newNotes);
     localStorage.setItem('notes', JSON.stringify(newNotes));
+    toast.success('nota excluída com sucesso!');
   }
   function handleSearch(event: ChangeEvent<HTMLInputElement>) {
     const searchQuery = event.target.value;
@@ -45,7 +47,7 @@ export function App() {
         )
       : notes;
   return (
-    <div className="mx-auto max-w-6xl my-12 space-y-6">
+    <div className="mx-auto max-w-6xl my-12 space-y-6 px-5">
       <img src={logo} alt="Logo do NLW Expert" />
       <form className="w-full">
         <input
@@ -57,15 +59,11 @@ export function App() {
         />
       </form>
       <div className="h-px bg-slate-700" />
-      <div className="grid grid-cols-3 gap-6 auto-rows-[250px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
         <NewNoteCard onNoteCreated={onNoteCreated} />
         {filteredNotes.map(note => {
           return (
-            <NoteCard
-              key={note.id}
-              note={note}
-              onNoteDeletion={onNoteDeletion}
-            />
+            <NoteCard key={note.id} note={note} onNoteDeleted={onNoteDeleted} />
           );
         })}
       </div>
