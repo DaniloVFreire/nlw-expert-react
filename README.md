@@ -18,6 +18,14 @@ Projeto feito no nlw 14 (nlw expert), utilizando react com typescript e vite, cr
 - lucide-react(pacote de icones): `npm i lucide-react`
 - sonner (pacote de notificações): `npm i sonner`
 
+## Como rodar aplicação:
+
+```bash
+cd nlw-expert-notes
+npm install
+npm run dev
+```
+
 ## Anotações e resultados das aulas:
 
 [index dos resumos](class_notes/general-class-index)
